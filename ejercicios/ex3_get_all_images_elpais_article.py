@@ -12,22 +12,21 @@ def get_image_url(img):
     url = ""
     if 'data-src' in img.attrs:
         url = get_absolute_path(img['data-src'])
-        url = img['data-src']
     elif 'data-custom-lazyload-src' in img.attrs:
         url = get_absolute_path(img['data-custom-lazyload-src'])
-        url = img['data-custom-lazyload-src']
     else:
         raise RuntimeError('Url no encontrada para la imagen' + img['alt'])
     return url
 
 def get_absolute_path(url):
-    # TODO: esta regex no funciona
     if re.search("^/[a-z]", url):
         url = "https://elpais.com" + url
+        return url
     if not url.startswith('http://'):
         url = "http://" + re.sub(r'^//', '', url)
+        return url
     else:
-        pass
+        return url
 
 
 if __name__ == "__main__":
@@ -37,14 +36,17 @@ if __name__ == "__main__":
     dest_dir = 'imagenes_articulo'
     if not os.path.exists(dest_dir):
         os.makedirs(dest_dir)
+    counter = 1
     for img in get_all_images(soup):
-        counter = 1
-        print("downloading image in file " + str(counter) + " ...")
+        dest_file = dest_dir + "/" + str(counter) + ".jpg"
+        print("downloading image in file " + dest_file)
         url = get_image_url(img)
         print("url: " + url)
         downloaded_image = requests.get(url)
-        with open(counter, "wb") as f:
+        with open(dest_file, "wb") as f:
             f.write(downloaded_image.content)
             counter += 1
+
+
 
 

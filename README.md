@@ -19,16 +19,9 @@
   - POST
   - ...
 
-  
+Esquema básico (en el GET el body es opcional, en POST es obligatorio):
+![http_diagram.pn](assets/http_diagram.png)
 
-mermaid
-  graph LR
-  A[Client] -->|GET HEADERS + BODY|B[Server]
-B[Server] -->|RESPONSE HEADERS + BODY|A[Server]
-
-
-
-  
 
 
 ## Tipos de webs
@@ -91,8 +84,3 @@ Nos van a ayudar en la tarea manual previa al scrapeo, para identificar patrones
 Protocolo gopher, RFC sencilla de leer:
 
 - https://tools.ietf.org/rfc/rfc1436.txt
-
-
-```
-
-```
