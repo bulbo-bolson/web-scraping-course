@@ -17,3 +17,25 @@
 
 - Sobre esa página de artículo del país,
   - Extraer todos los links y mostrarlos por pantalla
+
+
+
+## Ejercicio 3
+
+- Sobre esa página de artículo del país
+  - Extraer todas las imágenes y guardarlas en disco duro
+
+
+
+## Ejercicio 4
+
+- Sobre esa página de artículo del país
+  - En vez de usando requests, usando **urllib**
+  - Descargar algo, por ejemplo todos los párrafos y mostrarlos por pantalla
+
+
+
+## Ejercicio 5
+
+- Sobre la página https://www.jotdown.es buscar un artículo
+  - Descargar un par de artículos
