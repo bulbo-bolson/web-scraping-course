@@ -10,3 +10,10 @@
 - Siguiente paso:
   - Extraer el cuerpo
   - Eliminar la publicidad
+
+
+
+## Ejercicio 2
+
+- Sobre esa página de artículo del país,
+  - Extraer todos los links y mostrarlos por pantalla

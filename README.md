@@ -21,15 +21,15 @@
 
   
 
-  ```mermaid
+mermaid
   graph LR
   A[Client] -->|GET HEADERS + BODY|B[Server]
 B[Server] -->|RESPONSE HEADERS + BODY|A[Server]
-  ```
+
+
 
   
-  
-  
+
 
 ## Tipos de webs
 
@@ -92,3 +92,7 @@ Protocolo gopher, RFC sencilla de leer:
 
 - https://tools.ietf.org/rfc/rfc1436.txt
 
+
+```
+
+```
