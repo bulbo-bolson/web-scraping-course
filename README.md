@@ -34,8 +34,10 @@ B[Server] -->|RESPONSE HEADERS + BODY|A[Server]
 ## Tipos de webs
 
 - Estáticas + (dinámica lado servidor)
+  - Nos centraremos en scrapear estas webs
 - Dinámica lado cliente
   - dom (html + eventos) (vista) cambiante. 
+  - Mayor complejidad de scrapeo
 
 
 
@@ -52,16 +54,18 @@ B[Server] -->|RESPONSE HEADERS + BODY|A[Server]
   - Serializar -> (persistencia)
     - Estándar: JSON ... etc
 - Extras
-  - Proxy, VPN -> bloqueo de IPs ...
+  - Proxy, VPN -> evitar bloqueo de IPs ...
   - Usar navegador headless
 
 
 
-Scrapping.org -> SASS para probar
+https://scrapy.org/-> Tienen un SASS para probar
 
 
 
 ### Herramientas developer del navegador
+
+Nos van a ayudar en la tarea manual previa al scrapeo, para identificar patrones
 
 - Consola Javascript
   - En principio no vamos a usarlo para el scraping
@@ -73,3 +77,18 @@ Scrapping.org -> SASS para probar
     - Respuesta
     - Campos
     - etc
+
+
+
+## Formato URLs
+
+<scheme>://[user:password]@host:[port]/path/path?[param1=value&param2=value][##Fragment]
+
+
+
+## Curiosidad
+
+Protocolo gopher, RFC sencilla de leer:
+
+- https://tools.ietf.org/rfc/rfc1436.txt
+
