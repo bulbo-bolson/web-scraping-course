@@ -1,18 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
 from anytree import Node, RenderTree
-import os
-import re
-import pprint
 
 
 def process_article_links(article_url, visited_sites = set()):
     article_soup = get_article_soup(article_url)
     related_links = get_related_links(article_soup)
-    print("==================================")
-    print("paginas visitadas:")
     pprint.pprint(visited_sites)
     for link in related_links:
+        print("procesando link: " + link)
         if link in visited_sites:
             pass
         else:
