@@ -39,3 +39,13 @@
 
 - Sobre la página https://www.jotdown.es buscar un artículo
   - Descargar un par de artículos
+
+
+
+## Ejercicio 6
+
+- Ir a una página de un artículo de jotdown, por ejemplo: https://www.jotdown.es/2019/05/la-ultima-palabra/
+  - De esa coger todos los artículos relacionados e ir saltando a cada uno
+    - Desa coger todos los artículos relacionados e ir saltando a cada uno
+      - ...etc
+      - (Si ya he estado antes en un artículo, no volver a él, pasar al siguiente)

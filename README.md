@@ -29,6 +29,7 @@ Esquema básico (en el GET el body es opcional, en POST es obligatorio):
 - Estáticas + (dinámica lado servidor)
   - Nos centraremos en scrapear estas webs
 - Dinámica lado cliente
+  - ajax:
   - dom (html + eventos) (vista) cambiante. 
   - Mayor complejidad de scrapeo
 
@@ -76,6 +77,24 @@ Nos van a ayudar en la tarea manual previa al scrapeo, para identificar patrones
 ## Formato URLs
 
 <scheme>://[user:password]@host:[port]/path/path?[param1=value&param2=value][##Fragment]
+
+
+
+## Cookies
+
+- Tipos
+  - ID (mesa 10)
+  - DATA (Han sido 2 cervezas)
+    - Van firmadas digitalmente
+    - Pueden usarse para logarse entre sitios
+- El servidor nos las da, se mandan en las headers
+  - Bajo el campo cookie
+    - set-cookie: key=vale; ...
+    - set-cookie: key2=value2 ...
+- Nosotros la devolvemos en las peticiones posteriores
+  - Enviamos solo:
+    - key=value;
+    - key2=value2
 
 
 
