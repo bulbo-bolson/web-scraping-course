@@ -17,6 +17,7 @@ def process_article_links(article_url, visited_sites = {}):
             pass
         else:
             visited_sites[link] = None
+            article_url = link
             return process_article_links(article_url, visited_sites)
         
 
