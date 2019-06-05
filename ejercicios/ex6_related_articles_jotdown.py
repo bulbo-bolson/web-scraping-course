@@ -6,7 +6,7 @@ import re
 import pprint
 
 
-def process_article_links(article_url, visited_sites = {}):
+def process_article_links(article_url, visited_sites = set()):
     article_soup = get_article_soup(article_url)
     related_links = get_related_links(article_soup)
     print("==================================")
@@ -16,7 +16,7 @@ def process_article_links(article_url, visited_sites = {}):
         if link in visited_sites:
             pass
         else:
-            visited_sites[link] = None
+            visited_sites.add(link)
             article_url = link
             return process_article_links(article_url, visited_sites)
         
