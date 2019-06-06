@@ -49,3 +49,18 @@
     - Desa coger todos los artículos relacionados e ir saltando a cada uno
       - ...etc
       - (Si ya he estado antes en un artículo, no volver a él, pasar al siguiente)
+
+
+
+## Libre
+
+Ir a la página de thomann: https://www.thomann.de/es/sets_de_bateria.html
+
+Y extraer todos los artículos de batería, almacenarlos en un diccionario con:
+
+- Nombre del artículo
+- Precio
+
+- Los enlaces de las baterías están el div con la clase results
+- La última página está descrita en la página
+- Puedo usar requests para mandar los parámetros de la página, que las páginas se mandan como parámetros en el header. requests me escapa los ampersands

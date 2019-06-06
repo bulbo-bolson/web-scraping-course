@@ -1,20 +1,25 @@
 import requests
 from bs4 import BeautifulSoup
 from anytree import Node, RenderTree
+import pprint
 
 
-def process_article_links(article_url, visited_sites = set()):
+def process_article_links(article_url, visited_sites = set(), new_node = Node('')):
     article_soup = get_article_soup(article_url)
+    article_node = Node(article_url)
     related_links = get_related_links(article_soup)
-    pprint.pprint(visited_sites)
+    # pprint.pprint(visited_sites)
     for link in related_links:
-        print("procesando link: " + link)
+        # print("procesando link: " + link)
         if link in visited_sites:
             pass
         else:
             visited_sites.add(link)
+            new_node = Node(link)
+            new_node.parent = article_node
+            print(new_node)
             article_url = link
-            return process_article_links(article_url, visited_sites)
+            return process_article_links(article_url, visited_sites, new_node)
         
 
 def get_article_soup(article_url):
@@ -34,5 +39,7 @@ def get_related_links(article_soup):
 
 if __name__ == "__main__":
     article_url = "https://www.jotdown.es/2019/05/la-ultima-palabra/"
-    process_article_links(article_url)
+    article_url, visited_sites, nodes = process_article_links(article_url)
+    
+        
     

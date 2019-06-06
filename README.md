@@ -103,3 +103,20 @@ Nos van a ayudar en la tarea manual previa al scrapeo, para identificar patrones
 Protocolo gopher, RFC sencilla de leer:
 
 - https://tools.ietf.org/rfc/rfc1436.txt
+
+
+
+
+
+## Renderizado externo para arañas
+
+- Testing (utilidades de testing de un navegador)
+- Navegador Headless
+- Phantom js -> Deprecado -> Solo la parte del renderizado de un navegador (JS + css)
+- Rendering as a service -> Como el phantom js pero en un servidor externo
+
+
+
+- Webdriver -> Interfaz para testear diferentes navegadores (lo deben soportar)
+  - Selenium: interfaz para manipular navegador a través de webdriver
+  - Geckodriver: Proxy for using W3C WebDriver compatible clients to interact. HTTP API
