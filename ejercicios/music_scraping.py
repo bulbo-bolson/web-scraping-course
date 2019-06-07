@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import json
 
 
 def get_results_page_data(results_url, url_params = {}):
@@ -29,12 +30,15 @@ if __name__ == "__main__":
     RESULT_LIMIT = 25
     page_1 = get_results_page_data(results_url)
     counter = 1
+    all_drums = []
     while counter <= int(page_1['last_next_page']):
         next_page_params = {'pg' : counter, 'ls' : RESULT_LIMIT}
         next_page = get_results_page_data(results_url, url_params=next_page_params)
         for drum_link in next_page['drum_link_list']:
             drum = get_drumset_data(drum_link)
             print(drum)
+            all_drums.append(drum)
         counter += 1
+    print(json.dumps(all_drums))
             
         
